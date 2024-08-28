@@ -710,6 +710,23 @@ font-size: 20px;
         justify-content: center
     } */
 }
+@media only screen and (max-width: 392px){
+    #header {
+            width: 20em;
+          
+        }
+#contact_me input{
+    font-size: 11px;
+}
+        .input_button_container {
+            padding: 5px 60px;
+        }
+}
+
+
+     
+
+
 @media only screen and (max-width: 376px) {
 .to_the_left{
     margin-left: -20%;
@@ -721,8 +738,21 @@ font-size: 20px;
        width: 19em;
       
    }
+   #contact_me input {
+       font-size: 11px;
+   }
 
         
+}
+
+@media only screen and (max-width: 347px){
+#header {
+        width: 19em;
+     
+    }
+                .page_padding {
+                    padding: 5px 45px 90px 45px;
+                }
 }
 
 @media only screen and (max-width: 321px) {
@@ -779,12 +809,6 @@ font-size: 20px;
                                                       
 }
 
-@media only screen and (max-width: 296px) {
-/* #under_header h1 {
-        font-size: 13px;
-    } */
-
-}
 
 
 
