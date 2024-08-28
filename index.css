@@ -600,7 +600,7 @@ font-size: 15px;
     
  }
   .margin_left {
-      font-size: 11px;
+      font-size: 13px;
   }
   #mern_stack_in_under_header{
     font-size: 13px;
@@ -745,12 +745,38 @@ font-size: 20px;
                     font-size: 12px;
                 }
                 .input_button_container{
-                    margin-left: -20px;
-                        margin-right: -20px;
+                    /* margin-left: -20px;
+                        margin-right: -20px; */
+                        padding: 5px 60px;
                 }
+        #right_side_under_header {
+            padding: 20px 17px;
+        }
 #contact_me input{
     font-size: 11px;
 }
+
+        .page_padding {
+            padding: 5px 50px 90px 50px;
+        }
+}
+
+@media only screen and (max-width: 296px){
+        #under_header h1 {
+                font-size: 15px;
+            }
+        #right_side_under_header {
+            padding: 20px 20px;
+        }
+        #header {
+            width: 15em;
+        }
+                        .input_button_container {
+                            /* margin-left: -10px;
+                            margin-right: -10px; */
+                            padding: 5px 40px;
+                        }
+                                                      
 }
 
 
