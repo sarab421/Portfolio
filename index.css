@@ -47,7 +47,12 @@ ul li {
     margin-top: 12px;
     /* Increased spacing for better readability */
     text-align: left;
+
 }
+ul li:hover{
+    background-color: #12F7D6;
+}
+
 
 /* Link Styling */
 ul li a {
