@@ -67,3 +67,18 @@ if(userMessage ==""){
   // Open the mailto link
   window.location.href = mailtoLink;
  }
+
+let b =2;
+function showBar(){
+  if(b%2==0){
+
+ document.getElementById("menu_icon_bar").style.display = "block";
+ b++;
+  }
+  else if(b%2!=0){
+     document.getElementById("menu_icon").style.display = "block";
+     document.getElementById("menu_icon_bar").style.display = "none";
+     b++;
+  }
+ 
+}

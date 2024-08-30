@@ -12,8 +12,72 @@ html,body{
 .page_padding{
     padding: 5px 128px 90px 128px;
 }
-.menu_icon{
+#menu_icon{
     display: none;
+}
+/* Menu Icon Bar Styling */
+#menu_icon_bar {
+    display: none;
+    position: fixed;
+    right: 0px;
+    z-index: 1;
+    width: 150px;
+    /* Increased width for better spacing */
+    top: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    /* Rounded corners for a modern look */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Slightly darker and more opaque background */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    /* Adding shadow for depth */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition effects */
+}
+
+/* Unordered List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List Items Styling */
+ul li {
+    margin-top: 12px;
+    /* Increased spacing for better readability */
+    text-align: left;
+}
+
+/* Link Styling */
+ul li a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    /* Slightly larger font size */
+    color: #12F7D6;
+    /* Bright bluish color */
+    padding: 8px 12px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover Effect on Links */
+ul li a:hover {
+    background-color: #12F7D6;
+    /* Changes background on hover */
+    color: #292F36;
+    /* Darker text on hover */
+    transform: translateX(5px);
+    /* Slight shift to the right on hover */
+}
+
+/* Active State for Menu Links */
+ul li a:active {
+    background-color: #0bb2a0;
+    color: #fff;
 }
 
 
@@ -53,6 +117,10 @@ color: #12F7D6;
 }
 .blue_color_on_hover a:hover {
     color: #12F7D6;
+}
+
+.menus{
+    color: white;
 }
 
 /* right side */
@@ -697,13 +765,13 @@ font-size: 20px;
         width: 22em;
         margin: 0px -10%;
     }
-    .menu_icon{
+    #menu_icon{
         display: block;
         width: 20px;
         height: 20px;
         overflow: hidden;
     }
-    .menu_icon img{
+    #menu_icon img{
         width: 100%;
         height: 100%;
     }
