@@ -732,6 +732,9 @@ font-size: 20px;
 }
 
 @media only screen and (max-width: 482px){
+    .skills_grid_container{
+        margin-top: 45px;
+    }
 #under_header_sub_section_flex{
     flex-direction: column;
     gap: 30px;
