@@ -17,39 +17,81 @@ function showMenubar() {
   }
 }
 
+// Popup function
+function showPopup(message) {
+  // Create modal elements if they don't exist
+  if (!document.getElementById("myModal")) {
+    let modal = document.createElement("div");
+    modal.setAttribute("id", "myModal");
+    modal.setAttribute("class", "modal");
+
+    let modalContent = document.createElement("div");
+    modalContent.setAttribute("class", "modal-content");
+
+    let closeButton = document.createElement("span");
+    closeButton.setAttribute("class", "close");
+    closeButton.innerHTML = "&times;";
+
+    let messageP = document.createElement("p");
+    messageP.setAttribute("id", "modalMessage");
+
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(messageP);
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+
+    // Add event listener for the close button
+    closeButton.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  }
+
+  // Set the message and display the modal
+  document.getElementById("modalMessage").textContent = message;
+  document.getElementById("myModal").style.display = "block";
+}
+
+
+// Send Message Function
+
 function sendMessage() {
   const userEmail = document.getElementById("contact_me_input").value;
   let userMessage = document.getElementById("user_message").value;
   const userName = document.getElementById("user_name").value;
 
-if(userMessage ==""){
-  userMessage="No message Entered"
-}
+  if (userMessage === "") {
+    userMessage = "No message Entered";
+  }
 
   const templateParams = {
     email: userEmail,
     message: userMessage,
-    userName: userName,  
+    userName: userName,
   };
 
-  if(userEmail !="" && userName != ""){
-      emailjs.send("service_1sdptov", "template_zhlxtcm", templateParams).then(
-        function (response) {
-          alert("Email sent successfully!");
-          document.getElementById("contact_me_input").value = "";
-          document.getElementById("user_message").value="";
-          document.getElementById("user_name").value="";
-        },
-        function (error) {
-          console.error("Failed to send email:", error);
-        }
-      );
+  if (userEmail !== "" && userName !== "") {
+    emailjs.send("service_1sdptov", "template_zhlxtcm", templateParams).then(
+      function (response) {
+        showPopup("Message sent successfully!");
+        document.getElementById("contact_me_input").value = "";
+        document.getElementById("user_message").value = "";
+        document.getElementById("user_name").value = "";
+      },
+      function (error) {
+        console.error("Failed to send email:", error);
+      }
+    );
+  } else {
+    showPopup("Please Enter Your Email and Your Name");
   }
-  else{
-    alert("Please Enter Your Email and Your Name")
-  }
-
 }
+
 
  //Sending Gmail
  function send_mail(){
