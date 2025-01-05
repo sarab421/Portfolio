@@ -354,6 +354,10 @@ height: 100%;}
         padding-top: 5px;
         padding-bottom: 90px;
 }
+
+#line_under_skills img{
+    width: 314px;
+}
 .font_size_s_Medium{
     font-size: 50px;
     color: #12F7D6;
