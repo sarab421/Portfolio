@@ -95,12 +95,14 @@ width: 100%;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.ml_section h2{
+.ml_section h2, .web_section h2{
     color: #12F7D6;
     margin-left: 10px;
     margin-right: 10px;
 }
-
+.web_section{
+    margin-top: 20vh
+}
 
 /* Media Queries */
 

@@ -392,15 +392,11 @@ height: 100%;}
 }
 
 /* Make sure to center "Git" in the third row */
-.item9 {
-    grid-column: 1 / -1;
-    /* Span the entire width of the grid */
-    justify-self: center;
-    /* Center the item horizontally within its grid cell */
+
+.items{
+    margin-top: 10vh;
 }
-.item6{
-grid-column: 2;
-}
+
 
 .skills_img_container {
     display: flex;
