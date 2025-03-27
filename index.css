@@ -354,6 +354,9 @@ height: 100%;}
         padding-top: 5px;
         padding-bottom: 90px;
 }
+.item11{
+    grid-column-start: 2;
+}
 
 #line_under_skills img{
     width: 314px;
